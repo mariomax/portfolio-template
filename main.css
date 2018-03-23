@@ -1,0 +1,77 @@
+@import 'variables.css';
+
+html {
+    height: 100%;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Share', cursive;
+    font-weight: 700;
+}
+
+p {
+    font-family: 'Neuton', serif;
+}
+
+img {
+    /* display: block; */
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-area {
+    position: relative;
+    width: 100%;
+}
+
+.header-text {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        color: $light;
+        font-size: 3em;
+        font-weight: 700;
+        /* position: absolute; */
+        text-shadow: 2px 3px $trans-cover;
+    }
+}
+
+footer {
+    section {
+        background-color: $dark;
+        padding: 1em;
+        text-align: center;
+    }
+    small {
+        color: $light;
+        font-family: 'Share', cursive;
+        font-weight: 400;
+    }
+}
+
+p {
+    font-size: 16px;
+    padding: 1em;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas:
+    "header"
+    "content"
+    "footer";
+    grid-template-rows: auto 1fr auto;
+  }
+
+
+
+

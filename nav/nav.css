@@ -1,0 +1,89 @@
+@import '../variables.css';
+ 
+/* .overlay-text {
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 2em;
+    width: auto;
+} */
+
+.header-nav {
+    a {
+        display: grid;
+        justify-items: center;
+        text-decoration: none;
+    }
+    h2 {
+        color: $light;
+        font-size: 2em;
+        padding: .5em 0 .3em;
+        &:hover {
+            color: $orange;
+        }
+    }
+    img {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+.overlay-text {
+    position: relative;
+    width: 100%;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: $trans-cover;
+}
+
+.overlay-text:hover .overlay {
+    opacity: 1;
+}
+
+.on-hover {
+    color: $light;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+@media (min-width: 600px) {
+    .header-nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* grid-column-gap: .8em; */
+        grid-gap: 1.2em;
+        a {
+            h2 {
+                text-align: center;
+            }
+            img {
+                margin: 1em;
+            }
+        }
+    }
+}
+
+@media (min-width: 900px) {
+    .header-nav {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
